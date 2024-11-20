@@ -1,0 +1,6 @@
+streamlit
+pandas
+black
+flake8
+pytest
+python-dotenv
