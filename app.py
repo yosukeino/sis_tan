@@ -139,7 +139,6 @@ def main():
                     st.markdown("</div>", unsafe_allow_html=True)
 
                     # プレビューの表示
-                    st.markdown("### 📄 プレビュー")
                     Preview.render_html(html_content)
 
                 except Exception as e:
