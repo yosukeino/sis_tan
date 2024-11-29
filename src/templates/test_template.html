@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>英単語テスト</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      :root {
+        --text-color: #1e293b;
+        --border-color: #e2e8f0;
+      }
+
+      body {
+        font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+          "Hiragino Sans", Meiryo, sans-serif;
+        line-height: 1.5;
+        color: var(--text-color);
+        margin: 0;
+        background: white;
+      }
+
+      .page {
+        width: 210mm;
+        height: 297mm;
+        padding: 15mm 20mm;
+        box-sizing: border-box;
+      }
+
+      .header {
+        margin-bottom: 25px;
+      }
+
+      .title-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 15px;
+      }
+
+      .title-content {
+        flex-shrink: 0;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .test-info {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 3px;
+      }
+
+      .test-number {
+        color: #888;
+        font-size: 11px;
+      }
+
+      .info-section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+      }
+
+      .name-field,
+      .score-field {
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 8px 15px;
+        position: relative;
+        min-height: 24px;
+      }
+
+      .field-label {
+        position: absolute;
+        top: -7px;
+        left: 10px;
+        background: white;
+        padding: 0 4px;
+        font-size: 12px;
+        color: #666;
+      }
+
+      .questions {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 30px;
+        margin-top: 20px;
+      }
+
+      .question {
+        display: grid;
+        grid-template-columns: 25px 1fr;
+        gap: 10px;
+        align-items: start;
+      }
+
+      .question-number {
+        font-size: 14px;
+        color: #475569;
+      }
+
+      .question-content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .question-text {
+        font-size: 14px;
+      }
+
+      .answer-line {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .answer-blank {
+        font-family: "Courier New", monospace;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .answer-underline {
+        border-bottom: 1px solid #000;
+        min-height: 24px;
+        margin-top: 2px;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        .page {
+          width: 210mm;
+          height: 297mm;
+          page-break-after: always;
+        }
+
+        .questions {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="title-section">
+          <div class="title-content">
+            <h1 class="title">英単語テスト</h1>
+            <div class="test-info">
+              出題範囲:
+              <!-- RANGE -->
+            </div>
+            <div class="test-number">
+              テスト番号:
+              <!-- TEST_NUMBER -->
+            </div>
+          </div>
+        </div>
+        <div class="info-section">
+          <div class="name-field">
+            <span class="field-label">氏名</span>
+          </div>
+          <div class="score-field">
+            <span class="field-label">得点</span>
+            _____/<!-- TOTAL_QUESTIONS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="questions">
+        <!-- QUESTIONS -->
+      </div>
+    </div>
+  </body>
+</html>
